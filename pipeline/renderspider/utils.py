@@ -3,13 +3,9 @@ import redis
 
 import pgdb
 import yaml
-from jdtools import TradeDate, color_log as logging
 
 
 class Config:
-    logging.info("Load config.yaml.")
-    # filename = os.path.realpath(__file__)
-    # dirname = os.path.dirname(filename)
     dirname = '/app_pipeline'
     config_filename = os.path.join(dirname, "config.yaml")
 

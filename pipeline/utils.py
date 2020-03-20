@@ -12,11 +12,9 @@ import pgdb
 import yaml
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
-from jdtools import TradeDate, color_log as logging
 
 
 class Config:
-    logging.info("Load config.yaml.")
     filename = os.path.realpath(__file__)
     dirname = os.path.dirname(filename)
     config_filename = os.path.join(dirname, "config.yaml")
