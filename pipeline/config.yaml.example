@@ -1,0 +1,40 @@
+redis:
+  job_cache:
+    host: 127.0.0.1
+    port: 6379
+    decode_responses: True
+    db: 2
+  pipeline:
+    host: 127.0.0.1
+    port: 6379
+    decode_responses: True
+    db: 2
+
+pgdb:
+  server:
+    host: localhost
+    port: 5432
+    database: realtime_spider
+    user: postgres
+    password: china2017
+
+BROKER: redis://:@127.0.0.1/14
+BACKEND: redis://:@127.0.0.1/14
+
+STATIC_INTERVAL_JOBS_KEY: static_jobs_interval_{}
+JSON_INTERVAL_JOBS_KEY: json_jobs_interval_{}
+RENDER_INTERVAL_JOBS_KEY: render_jobs_interval_{}
+
+INTERVAL: [15, 30, 60]
+
+STATIC_JOBS_PIPE_KEY: static_jobs_pipeline
+RENDER_JOBS_PIPE_KEY: render_jobs_pipeline
+JSON_JOBS_PIPE_KEY: render_jobs_pipeline
+
+CONTENT_TASKS_CHANNEL: content_tasks
+JOB_RES_CHANNEL : job_res
+
+email_settings:
+  fromaddr: ''
+  password: ''
+  server: ''

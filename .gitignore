@@ -1,0 +1,83 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+
+# C extensions
+*.so
+
+# Distribution / packaging
+bin/
+build/
+develop-eggs/
+dist/
+eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+.tox/
+.coverage
+.cache
+nosetests.xml
+coverage.xml
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+
+# Rope
+.ropeproject
+
+# Django stuff:
+*.log
+*.pot
+celerybeat-schedule
+*.pid
+
+# Sphinx documentation
+docs/_build/
+
+# virtualenv
+py*env
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+ENV_SPIDER/
+
+# IDE
+.idea
+.vscode
+
+# Others
+*.tmp
+*/settings_local.py
+*/settings.py
+config/env
+pgdata
+src/
+
+# 忽略一些开发时用到的文件
+*migrations*
+
+test
+*.yaml
+core
+static

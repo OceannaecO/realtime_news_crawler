@@ -1,0 +1,26 @@
+FROM ubuntu:17.04
+#FROM selenium/standalone-chrome
+FROM python:3.6
+RUN apt update
+RUN apt-get install -y libnss3 libgconf-2-4
+
+# Install Chrome for Selenium
+RUN curl https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -o /chrome.deb
+RUN dpkg -i /chrome.deb || apt-get install -yf
+RUN rm /chrome.deb
+
+# Install chromedriver for Selenium
+RUN wget https://chromedriver.storage.googleapis.com/76.0.3809.126/chromedriver_linux64.zip
+RUN ls
+RUN unzip chromedriver_linux64.zip
+RUN ls
+RUN mv chromedriver /usr/local/bin/chromedriver
+RUN chown root:root /usr/local/bin/chromedriver
+RUN chmod +x /usr/local/bin/chromedriver
+
+ADD ./pipeline /app_pipeline
+WORKDIR /app_pipeline
+VOLUME /app_pipeline
+
+RUN pip install --trusted-host mirrors.aliyun.com --index-url https://mirrors.aliyun.com/pypi/simple/ --no-cache-dir -r /app_pipeline/requirements.txt
+
