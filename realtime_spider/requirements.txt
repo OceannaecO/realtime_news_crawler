@@ -9,5 +9,3 @@ uwsgi
 bs4==0.0.1
 itchat==1.3.10
 gevent==1.4.0
-git+http://www.profeto.cn:32769/deploy/django_jet.git
-git+http://install:china2019@www.profeto.cn:32769/deploy/jdtools.git

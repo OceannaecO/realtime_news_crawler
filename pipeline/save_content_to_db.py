@@ -13,7 +13,6 @@ from gevent import monkey, Greenlet
 import redis
 import pgdb
 from lxml import etree
-from jdtools import color_log as logging
 
 from generate_wordcloud import generate_wordfrequency
 from utils import (server_conn, job_cache_conn,
@@ -51,7 +50,6 @@ def crawl_static_content(task, only_check=False):
                 return {'status': False, 'error_msg': '没有正文规则', 'job': task['job']}
             return {'url': url, 'content': '', 'job_desc': job_desc}
     except Exception as e:
-        logging.error(e)
         if only_check:
             return {'status': False, 'error_msg': e, 'job': task['job']}
         return {'url': url, 'content': '', 'job_desc': job_desc}
@@ -136,7 +134,6 @@ def save_content(content_tasks, only_check=False):
                 generate_wordfrequency(content, url_hash)
             except:
                 traceback.print_exc()
-                logging.error('url_hash：%s   生成词频数据失败')
         container.append(
             {
                 'url_hash': url_hash,
