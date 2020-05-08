@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'realtime_spider',
+    'jobs',
 ]
 JET_SIDE_MENU_COMPACT = True
 
@@ -148,10 +148,3 @@ CELERY_BROKER_URL = 'redis://redis:6379/1'
 CELERY_RESULT_BACKEND = 'redis://redis:6379/0'
 CELERY_TASK_SERIALIZER = 'json'
 CELERY_TIMEZONE = TIME_ZONE
-CELERY_IMPORTS = [
-]
-
-
-CELERY_BEAT_SCHEDULE = {
-}
-
