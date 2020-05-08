@@ -18,7 +18,7 @@ RUN mv chromedriver /usr/local/bin/chromedriver
 RUN chown root:root /usr/local/bin/chromedriver
 RUN chmod +x /usr/local/bin/chromedriver
 
-ADD ./pipeline /app_pipeline
+ADD ./news_crawler_spider_pipeine /app_pipeline
 WORKDIR /app_pipeline
 VOLUME /app_pipeline
 

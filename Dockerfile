@@ -1,6 +1,6 @@
 FROM python:3.6
 
-ADD ./realtime_spider /app
+ADD ./realtime_news_crawler /app
 WORKDIR /app
 VOLUME /app
 
