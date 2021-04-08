@@ -1,5 +1,5 @@
 celery==4.3.0
-Django==2.2
+Django==2.2.20
 redis==3.2.1
 requests==2.21.0
 weibo==0.2.2
