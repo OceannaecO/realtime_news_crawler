@@ -10,4 +10,4 @@ lxml==4.4.1
 pgdb==0.0.8
 gevent==1.4.0
 Scrapy==2.0.0
-scrapy-splash==0.7.2
+scrapy-splash==0.8.0
